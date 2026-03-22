@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chrome badge favicon">
+  <defs>
+    <radialGradient id="outer" cx="30%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#d8e0ec" />
+      <stop offset="100%" stop-color="#8a98af" />
+    </radialGradient>
+    <radialGradient id="inner" cx="30%" cy="25%" r="70%">
+      <stop offset="0%" stop-color="#f9fcff" />
+      <stop offset="100%" stop-color="#b8c5d8" />
+    </radialGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#e6edf7" stroke="#74839a" stroke-width="2" />
+  <circle cx="32" cy="32" r="19" fill="url(#outer)" stroke="#5f6d84" stroke-width="1.5" />
+  <circle cx="32" cy="32" r="13" fill="url(#inner)" stroke="#8d9bb0" stroke-width="1" />
+  <text x="32" y="37" text-anchor="middle" font-family="Orbitron, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" fill="#415065">FS</text>
+</svg>
