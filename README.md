@@ -19,6 +19,71 @@ This app uses FakeStoreAPI as a testing API.
 - `POST`, `PUT`, and `DELETE` responses can appear successful.
 - Underlying data is not permanently changed.
 
+## What To Explore In The App
+
+Use this quick path to understand the full experience:
+
+1. Home page (`/`)
+- Read the overview and use navigation shortcuts.
+
+2. Product listing (`/products`)
+- Browse live FakeStoreAPI data.
+- Open product cards to inspect details.
+- Try loading/retry behavior by refreshing during network issues.
+
+3. Product details (`/products/:productId`)
+- Review title, category, rating, description, and price.
+- Use action buttons to move into edit and delete flows.
+
+4. Add product (`/add-product`)
+- Test validation errors by submitting empty fields.
+- Submit valid data and observe test-mode success messaging.
+
+5. Edit product (`/products/:productId/edit`)
+- Modify fields and submit updates.
+- Confirm success message explains non-persistent API behavior.
+
+6. Delete product (`/products/:productId/delete`)
+- Open the confirmation modal and complete a delete request.
+- Confirm success messaging and accessibility-friendly dialog behavior.
+
+7. Additional features (`/additional-features`)
+- Explore category badges, summary cards, and featured products.
+
+## How It Works
+
+### Routing
+
+The app uses React Router for client-side navigation:
+
+- `/`: Home
+- `/products`: Product listing
+- `/products/:productId`: Product details
+- `/add-product`: Add form
+- `/products/:productId/edit`: Edit form
+- `/products/:productId/delete`: Delete flow
+- `/additional-features`: Extra storefront data view
+
+### Data Fetching and Error Handling
+
+- Axios is used for all FakeStoreAPI requests.
+- Request timeouts are configured to avoid hanging UI states.
+- Error alerts include retry actions on key pages.
+- Components use loading states and placeholders while data is fetched.
+
+### Form and Action Behavior
+
+- Add/Edit forms include client-side validation and field-level messages.
+- Duplicate submit/delete guards prevent accidental repeated actions.
+- Success messages for write actions explicitly explain FakeStoreAPI test behavior.
+
+### Accessibility and Responsiveness
+
+- Skip link and focus-visible styles improve keyboard navigation.
+- Live regions announce loading state changes for assistive technologies.
+- Modal labeling and navigation controls are screen-reader friendly.
+- Bootstrap grid plus custom breakpoints support smaller screens.
+
 ## Tech Stack
 
 - React 19
