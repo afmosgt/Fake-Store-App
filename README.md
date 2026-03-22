@@ -1,5 +1,8 @@
 # The Fakest Store
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-2ea44f?style=for-the-badge)](https://afmosgt.github.io/Fake-Store-App)
+[![CI](https://github.com/afmosgt/Fake-Store-App/actions/workflows/ci.yml/badge.svg)](https://github.com/afmosgt/Fake-Store-App/actions/workflows/ci.yml)
+
 A responsive React storefront built with Vite, React Router, React Bootstrap, and FakeStoreAPI.
 
 ## Features
@@ -164,3 +167,22 @@ fake-store-app/
 ## Deployment
 
 This app can be deployed to platforms like Vercel, Netlify, or GitHub Pages (with a Vite-compatible setup).
+
+### GitHub Pages
+
+This repository is configured for GitHub Pages deployment.
+
+1. Push your latest code to `main`.
+2. Run:
+
+```bash
+npm run deploy
+```
+
+3. In GitHub repository settings, open Pages:
+- Source: `Deploy from a branch`
+- Branch: `gh-pages` / `(root)`
+
+Published URL:
+
+`https://afmosgt.github.io/Fake-Store-App`
