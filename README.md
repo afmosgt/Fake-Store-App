@@ -1,16 +1,101 @@
-# React + Vite
+# The Fakest Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React storefront built with Vite, React Router, React Bootstrap, and FakeStoreAPI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing with category, rating, and price details.
+- Product details page with edit and delete actions.
+- Add, edit, and delete forms with client-side validation.
+- Timeout-aware API error handling and retry actions.
+- Accessibility improvements: skip link, focus styles, live regions, and labeled modal dialog.
+- Mobile-friendly layout using Bootstrap grid and custom responsive styling.
+- Automated tests with Vitest and Testing Library, including `jest-axe` accessibility checks.
 
-## React Compiler
+## Important FakeStoreAPI Note
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This app uses FakeStoreAPI as a testing API.
 
-## Expanding the ESLint configuration
+- `POST`, `PUT`, and `DELETE` responses can appear successful.
+- Underlying data is not permanently changed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite 8
+- React Router DOM 7
+- React Bootstrap + Bootstrap 5
+- Axios
+- ESLint (`jsx-a11y`, React Hooks, React Refresh)
+- Vitest + Testing Library + `jest-axe`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+ (recommended)
+- npm
+
+### Install
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Available Scripts
+
+- `npm run dev`: start local Vite dev server.
+- `npm run build`: create a production build in `dist`.
+- `npm run preview`: preview the production build locally.
+- `npm run lint`: run ESLint checks.
+- `npm run test`: run Vitest in watch mode.
+- `npm run test:run`: run Vitest once (CI-friendly).
+
+## Quality Checks
+
+Use this sequence before pushing:
+
+```bash
+npm run lint
+npm run test:run
+npm run build
+```
+
+## Project Structure
+
+```text
+fake-store-app/
+	public/
+	src/
+		__tests__/
+		components/
+		utils/
+		App.jsx
+		App.css
+		index.css
+		main.jsx
+	vite.config.js
+	package.json
+```
+
+## Deployment
+
+This app can be deployed to platforms like Vercel, Netlify, or GitHub Pages (with a Vite-compatible setup).
